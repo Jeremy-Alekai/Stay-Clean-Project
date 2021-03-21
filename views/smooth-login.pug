@@ -1,0 +1,38 @@
+html
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    link(href="/css/bootstrap.min.css" rel="stylesheet")
+    //- link(href="/css/styles.css" rel="stylesheet")
+    link(rel='stylesheet' href='/css/smooth-login.css')
+    title Login and Registration Form
+    
+  body
+    include nav-bar.pug
+    .hero
+      .form-box
+        .button-box
+          #btn
+          button.toggle-btn(type='button' onclick='login()')
+            | Login
+          button.toggle-btn(type='button' onclick='register()')
+            | Register
+        .social-icons
+          img(src='/images/profiles/client.jpg' width='80px')
+        // Login form
+        form#login.input-group
+          input.input-field(type='text' placeholder='User Name' required)
+          input.input-field(type='password' placeholder='Enter Password' required)
+          input.cheque-box(type='checkbox')
+          span Remember me
+          button.submit-btn(type='submit') log in
+        // registration form
+        form#register.input-group
+          input.input-field(type='text' placeholder='user Id' required)
+          input.input-field(type='password' placeholder='Email ID' required)
+          input.input-field(type='password' placeholder='Enter password' required)
+          input.cheque-box(type='checkbox')
+          span I agree to the terms and Conditions
+          button.submit-btn(type='submit') Register
+    script(src='/js/smooth-login.js')

@@ -1,0 +1,122 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(href='/css/bootstrap.min.css' rel='stylesheet')
+    link(href='/css/styles.css' rel='stylesheet')
+    title navigation Bar
+  body 
+    include nav-bar.pug
+          // login form starts here
+    //
+      <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+      <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    .container.emp-profile
+      form(method='post')
+        .row
+          .col-md-4
+            .profile-img
+              img(src='/images/profiles/profile1.jpg' alt='')
+          .col-md-6
+            .profile-head
+              h5
+                | Yakobo Ghelani
+              h6(style='color: black;') 45 Years Old
+              h6
+                | Truck Driver
+              p.proile-rating RATINGS : 
+                span 8/10
+              ul#myTab.nav.nav-tabs(role='tablist')
+                li.nav-item
+                  a#home-tab.nav-link.active( href='driver-pay.html' role='tab' aria-controls='home' aria-selected='true') About
+                li.nav-item
+                  a#home-tab.nav-link( href='pickup-zones.html' role='tab' aria-controls='home' aria-selected='true') Pickup-Zones
+                li.nav-item
+                  a#home-tab.nav-link(href='pickup-zones.html' role='tab' aria-controls='home' aria-selected='true') Payment invoice
+        .row
+          .col-md-4
+            .profile-work
+              p PERSONAL CONTACTS
+              span Mobile Number : +256775430643
+              br
+              span Work : 
+                a(href='') JFrozzy@driver.stayclean.com
+              br
+              span Personal:
+                a(href='')  JFrozzy@gmail.com
+              br
+              p NEXT OF KIN
+              span Name : Namboozo Jackline
+              br
+              span Relationship : Wife
+              br
+              span Mobile Number : +256775430643 or +256 708488261
+              br
+              span Work : 
+                a(href='') JackyNinja@gmail.com
+              br
+          .col-md-8
+            #myTabContent.tab-content.profile-tab
+              #home.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='home-tab')
+                .row
+                  .col-md-6
+                    label User ID:
+                  .col-md-6
+                    p STC001
+                .row
+                  .col-md-6
+                    label Date Of Birth:
+                  .col-md-6
+                    p 19-07-1999
+                .row
+                  .col-md-6
+                    label National ID No.
+                  .col-md-6
+                    p 1927t35171257
+                .row
+                  .col-md-6
+                    label Residence:
+                  .col-md-6
+                    p Mukono
+                .row
+                  .col-md-6
+                    label Driving License No.
+                  .col-md-6
+                    p U12SAD
+                .row
+                  .col-md-6
+                    label History of Misconduct:
+                  .col-md-6
+                    p None
+                br
+                .row
+                  .col-md-6
+                    label Conductors Assists
+                    .col-md-6(style='width: 200%;')
+                      ol
+                        li
+                          span Mukisa John 
+                          br
+                          span Tel : +256705430643
+                          br
+                        li
+                          span Mungufeni Jacob 
+                          br
+                          span Tel : +256775430643
+                          br
+                        li
+                          span Lenai John 
+                          br
+                          span Tel : +256775430643
+                          br
+        br
+        br
+        br
+        hr
+        // its starts here
+        link(href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet')
+        script(src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js')
+        script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js')

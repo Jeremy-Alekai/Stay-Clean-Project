@@ -1,0 +1,48 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(href='css/bootstrap.min.css' rel='stylesheet')
+    title Driver Registration
+  body
+    include nav-bar.pug
+    .container-fluid
+      form.row.g-3(style='width: 800px;')
+        .col-md-6
+          label.form-label(for='inputEmail4') Username
+          input.form-control(type='text' placeholder='e.g. STC-019' aria-label='First name')
+        br
+        .col-md-2
+          label.form-label(for='validationDefault04') Gender
+          select#validationDefault04.form-select(required)
+            option Male
+            option Female
+        .col-3
+          label.form-label(for='inputAddress') Residence
+          input#inputAddress.form-control(type='text' placeholder='Residence')
+        .col-4
+          label.form-label(for='inputAddress') Telephone Number
+          input#inputAddress.form-control(type='text' placeholder='')
+        .col-12
+          label.form-label(for='inputAddress2') Address 2
+          input#inputAddress2.form-control(type='text' placeholder='Apartment, studio, or floor')
+        .col-md-6
+          label.form-label(for='inputCity') City
+          input#inputCity.form-control(type='text')
+        .col-md-4
+          label.form-label(for='inputState') State
+          select#inputState.form-select
+            option(selected) Choose...
+            option ...
+        .col-md-2
+          label.form-label(for='inputZip') Zip
+          input#inputZip.form-control(type='text')
+        .col-12
+          .form-check
+            input#gridCheck.form-check-input(type='checkbox')
+            label.form-check-label(for='gridCheck')
+              | Check me out
+        .col-12
+          button.btn.btn-primary(type='submit') Sign in
