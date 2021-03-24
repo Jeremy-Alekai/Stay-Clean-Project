@@ -1,0 +1,103 @@
+<html>
+
+<head>
+    <title>Login and Registration Form</title>
+    <link rel="stylesheet" href="/public/css/smooth-login.css" />
+</head>
+
+<body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/public/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/public/styles.css" rel="stylesheet">
+        <title>navigation Bar</title>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #141413;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <!--Add the logo for the company-->
+                    <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-top">
+                    <strong style="color: coral;">Stay<span style="color:lightblue;">clean</span></strong>
+                </a>
+                <center>
+
+                    <!--Navbar content begins here-->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                <!--Add the word active in the class attribute to show the tab is active-->
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="schedule.html">Schedules</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Login</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="client-registration.html">Client</a></li>
+                                    <li><a class="dropdown-item" href="Driver-registration.html">Driver</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact Us</a>
+                            </li>
+
+                            </li>
+                        </ul>
+
+                    </div>
+            </div>
+            </div>
+        </nav>
+
+        <!--login form starts here-->
+        <div class="hero" style="background-color: gray;">
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btn"></div>
+                    <button type="button" class="toggle-btn" onclick="login()">
+            Employee
+          </button>
+                    <button type="button" class="toggle-btn" onclick="register()">
+            Client
+          </button>
+                </div>
+
+                <div class="social-icons">
+                    <img src="/public/images/profiles/client.jpg" width="80px" />
+                </div>
+                <!-- Client Login form -->
+                <form id="login" class="input-group">
+                    <input type="text" class="input-field" placeholder="USER NAME" required />
+                    <input type="password" class="input-field" placeholder="Enter Password" required />
+                    <input type="checkbox" class="cheque-box" /><span>Remember me</span>
+                    <button type="submit" class="submit-btn">log in</button>
+                </form>
+
+                <!-- Employee Login Form -->
+                <form id="register" class="input-group">
+                    <input type="text" class="input-field" placeholder="Truck Code" required />
+                    <input type="text" class="input-field" placeholder="Username" required />
+                    <input type="password" class="input-field" placeholder="Enter password" required />
+                    <input type="checkbox" class="cheque-box" /><span>Remember me</span
+          >
+          <button type="submit" class="submit-btn">Login</button>
+        </form>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="/public/js/smooth-login.js"></script>
+
+  </body>
+</html>

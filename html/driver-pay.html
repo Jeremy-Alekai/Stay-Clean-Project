@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/public/css/styles.css" rel="stylesheet">
+    <title>navigation Bar</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #141413;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <!--Add the logo for the company-->
+                <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-top">
+                <strong style="color: coral;">Stay<span style="color:lightblue;">clean</span></strong>
+            </a>
+            <div class="center-navcontent">
+
+                <!--Navbar content begins here-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                            <!--Add the word active in the class attribute to show the tab is active-->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="schedule.html">Schedules</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Login</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Client</a></li>
+                                <li><a class="dropdown-item" href="login-form.html">Driver</a></li>
+                            </ul>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact-us.html">Contact Us</a>
+                        </li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--login form starts here-->
+    <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+
+    <div class="container emp-profile">
+        <form method="post">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="profile-img">
+                        <img src="/public/images/profiles/profile1.jpg" alt="" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="profile-head">
+                        <h5>
+                            Yakobo Ghelani
+                        </h5>
+
+                        <h6 style="color: black;">45 Years Old</h6>
+                        <h6>
+                            Truck Driver
+                        </h6>
+
+                        <p class="proile-rating">RATINGS : <span>8/10</span></p>
+
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="driver-pay.html" role="tab" aria-controls="home" aria-selected="true">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="home-tab" data-toggle="tab" href="pickup-zones.html" role="tab" aria-controls="home" aria-selected="true">Pickup-Zones</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " id="home-tab" data-toggle="tab" href="pickup-zones.html" role="tab" aria-controls="home" aria-selected="true">Payment invoice</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="profile-work">
+                        <p>PERSONAL CONTACTS</p>
+                        <span>Mobile Number : +256775430643</span><br />
+                        <span>Work : <a href="">JFrozzy@driver.stayclean.com</a></span><br />
+                        <span>Personal:<a href=""> JFrozzy@gmail.com</a></span><br />
+
+                        <p>NEXT OF KIN</p>
+                        <span>Name : Namboozo Jackline</span><br />
+                        <span>Relationship : Wife</span><br />
+                        <span>Mobile Number : +256775430643 or +256 708488261</span><br />
+                        <span>Work : <a href="">JackyNinja@gmail.com</a></span><br />
+
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="tab-content profile-tab" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>User ID:</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>STC001</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Date Of Birth:</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>19-07-1999</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>National ID No.</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>1927t35171257</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Residence:</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>Mukono</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Driving License No.</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>U12SAD</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>History of Misconduct:</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>None</p>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Conductors Assists</label>
+                                    <div class="col-md-6" style="width: 200%;">
+                                        <ol>
+                                            <li>
+                                                <span>Mukisa John </span><br>
+                                                <span>Tel : +256705430643</span><br>
+                                            </li>
+                                            <li>
+                                                <span>Mungufeni Jacob </span><br>
+                                                <span>Tel : +256775430643</span><br>
+                                            </li>
+                                            <li>
+                                                <span>Lenai John </span><br>
+                                                <span>Tel : +256775430643</span><br>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+        </form>
+        </div>
+        <br><br><br>
+        <hr>
+
+        <!-- its starts here -->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
