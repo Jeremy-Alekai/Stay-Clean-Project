@@ -1,0 +1,41 @@
+extends dashBoard 
+block content
+    // MAIN TITLE STARTS HERE
+    div(class='main__title')
+        img(src='/images/profiles/hello.svg' alt='')
+    div(class='main__greeting')
+        h1 Hello Admin
+        p Welcome to the StayClean dashboard
+    // MAIN TITLE ENDS HERE
+
+    // CHARTS STARTS HERE
+    .charts
+        div(class='charts__left')
+            div(class='charts__left__title')
+                div
+                    h1 Daily Reports
+                    p M
+                // <i class="fa fa-usd" aria-hidden="true"></i>
+                // <div id="apex1"></div>
+        div(class='charts__right')(style="background-image:linear-gradient(to right,purple;")
+            div(class='charts__right__title')
+                div
+                    h1 Monthly Stats
+                    p StayClean Waste Company, Muyenga
+            i.fa.fa-usd(aria-hidden='true')
+                    #apex1
+                        div(class='charts__right__cards')
+                            .card1
+                                h1 Income
+                                p(style='font-size: large;') UGX 1,505,300
+                            .card1
+                                h1 Clients
+                                p(style='font-size: large;') 50
+                            .card1
+                                h1 Pickups
+                                p(style='font-size: large;') 42
+                            .card1
+                                h1 Complaints
+                                p(style='font-size: larger;') 8
+                    // CHARTS ENDS HERE
+

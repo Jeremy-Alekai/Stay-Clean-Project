@@ -1,0 +1,58 @@
+extends dashBoard
+block content
+  
+  // registration info
+  .card(style='width: 45rem;background-color: gray; align-content: center;margin-left: 50px;margin-top:100px;')
+    .card-body(style='width: 700px')
+      // 
+      h1.mb-4(style='blue;') Employee Registration Form
+      // the registration form starts here
+      form.row.g-3(method='POST' action='' enctype='multipart/form-data' style='align-content: center;margin-left:25px;')
+        .col-md-6
+          label.form-label(for='inputEmail4') Employee Name
+          // will ask for some clarity about the aria-label="First Name" on the next line below
+          input.form-control(type='text' placeholder='employee name' name='employee name')
+        .col-md-4
+          label.form-label(for='inputEmail4') User Name
+          input.form-control(type='text' placeholder='username' name='Username')
+        .row
+          // role at the company
+          .col-md-3
+            label.form-label(for='validationDefault04') Role
+            select#validationDefault04.form-select(required='')
+              option Driver
+              option Conductor
+          // gender selection
+          .col-md-3
+            label.form-label(for='validationDefault04') Gender
+            select#validationDefault04.form-select(required='')
+              option Male
+              option Female
+          // age
+          .col-md-3
+            label.form-label(for='validationDefault04') Year Of Birth
+            input#age.form-control(type='text' placeholder='age')
+        // residence
+        .col-8
+          label.form-label(for='inputAddress') NIN number
+          input#inputAddress.form-control(type='text' placeholder='NIN')
+        .row
+          .col-8
+            label.form-label(for='inputAddress2') Driver License
+            input#inputAddress2.form-control(type='text' placeholder='license number' name='driverLicense')
+          .col-md-6
+            label.form-label(for='formFileMultiple') Upload documents
+            input#formFileMultiple.form-control(type='file' name='documentupload' multiple='')
+          // tel number
+          .col-7
+            label.form-label(for='inputAddress') Tel Number
+            input#inputAddress.form-control(type='text' placeholder='+256-758-328' name='tel number')
+          // Residence
+          .col-5
+            label.form-label(for='inputAddress') Residence
+            input#inputAddress.form-control(type='text' placeholder='e.g. Nsambya' name='residence')
+        .col-12
+          button.btn.btn-primary(style='width: 650px;height: 40px;' type='submit')
+            span(style='font-weight:4rem;') Register Employee
+  script(src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js' crossorigin='anonymous')
+  script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js' crossorigin='anonymous')

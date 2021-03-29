@@ -2,14 +2,11 @@
 const express = require('express');
 const multer = require('multer');
 const router = express.Router();
+const Employee = require('../Models/Employee')
 
-//Router
-router.get('/addemployee', (req, res) => {
+//get and show the createEmployee.pug file
+router.get('/', (req, res) => {
     res.render('createEmployee1', { title: 'Add Employee' })
-})
-
-router.post('/addemployee', (req, res) => {
-    console.log(req.body)
 })
 
 // image upload
@@ -23,12 +20,54 @@ var storage = multer.diskStorage({
 });
 var upload = multer({ storage: storage })
 
-router.post('/addemployee', upload.single('imageupload'), (req, res) => {
+router.post('/', upload.single('imageupload'), async(req, res) => {
     try {
-        console.log(req.file);
+        const employee = new Employee(req.body);
+        employee.imageupload = req.file.path;
+        await employee.save()
+        res.redirect('/employee')
     } catch (err) {
-        res.send(400);
+        console.log(err);
+        res.send('Sorry! Something went wrong.');
     }
 })
+
+
+// update record based on the _id from the database
+// after adding the update button on the  employeelist
+// renders the updateEmployee pug file where you can update
+// add the `app.use('/public/images', express.static(__dirname + '/public/images'));`
+// to index.js to make sure image is showing
+router.get('/update/:id', async(req, res) => {
+    try {
+        const updateEmp = await Employee.findOne({ _id: req.params.id })
+        res.render('updateEmployee', { user: updateEmp })
+    } catch (err) {
+        res.status(400).send("Unable to find item in the database");
+    }
+})
+
+// route to save the updated ddata
+router.post('/update', async(req, res) => {
+    try {
+        await Employee.findOneAndUpdate({ _id: req.query.id }, req.body)
+        res.redirect('/employee');
+    } catch (err) {
+        res.status(404).send("Unable to update item in the database");
+    }
+})
+
+//delete and employee record from the database
+// add the delete code to the employeelist pug file
+router.post('/delete', async(req, res) => {
+    try {
+        await Employee.deleteOne({ _id: req.body.id })
+        res.redirect('back')
+    } catch (err) {
+        res.status(400).send("Unable to delete item in the database");
+    }
+})
+
+module.exports = router;
 
 module.exports = router;

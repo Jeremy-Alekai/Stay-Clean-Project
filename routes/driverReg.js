@@ -1,0 +1,16 @@
+const express = require('express')
+
+const router = express.Router();
+// router.get('/', (req, res) => {
+//     res.send('driver');
+// })
+
+router.get('/', (req, res) => {
+    res.render('createEmployee1', { title: 'StayClean Employee Registration' });
+})
+
+router.post('/', (req, res) => {
+    res.render('createEmployee1', { title: 'StayClean Employee Registration' });
+})
+
+module.exports = router;

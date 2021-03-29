@@ -1,0 +1,60 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' integrity='sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN' crossorigin='anonymous')
+    link(href='/css/bootstrap.min.css' rel='stylesheet')
+    
+    link(rel='stylesheet' href='/css/dashboard.css')
+    link(href='/css/styles.css' rel='stylesheet')
+
+    title StayClean Dashboard
+  body#body
+    .container
+      nav.navbar
+        div(class='nav_icon' onclick='toggleSidebar()')
+          i.fa.fa-bars(aria-hidden='true')
+        div(class='navbar__left')
+          a(class='active_link') StayClean
+      main
+        div(class='main__container')
+
+          block content
+
+      #sidebar
+        div(class='sidebar__title')
+          div(class='sidebar__img')
+            img(src='/images/profiles/avatar.svg' style='margin-left: 80px;' alt='logo')
+            // <h1>StayClean</h1>
+          i#sidebarIcon.fa.fa-times(onclick='closeSidebar()' aria-hidden='true')
+        div(class='sidebar__menu')
+          div(class='sidebar__link active_menu_link')
+            i.fa.fa-home
+            a(href='dashLanding') Dashboard
+          h2 COMPANY SYSTEM
+          div(class='sidebar__link')
+            i.fa.fa-user-secret(aria-hidden='true')
+            a(href='#') Management
+          div(class='sidebar__link')
+            i.fa.fa-handshake-o
+            a(href='#') Clients
+          div(class='sidebar__link')
+            i.fa.fa-wrench
+            a(href='createEmployee') Employees
+          div(class='sidebar__link')
+            i.fa.fa-building-o
+            a(href='schedule.html') Pickup Schedule
+          h2 PAYMENTS
+          div(class='sidebar__link')
+            i.fa.fa-money
+            a(href='#') Employee Payroll
+          div(class='sidebar__link')
+            i.fa.fa-briefcase
+            a(href='#') Client Payments
+          div(class='sidebar__logout')
+            i.fa.fa-power-off
+            a(href='#') Log out
+    //
+      <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+      <script src="script.js"></script>

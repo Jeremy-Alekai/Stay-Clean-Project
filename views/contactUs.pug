@@ -1,0 +1,59 @@
+doctype
+head
+  meta(charset="UTF-8")
+  meta(http-equiv="X-UA-Compatible", content="IE=edge")
+  meta(name="viewport", content="width=device-width,initial-scale=1")
+  link(href="/css/bootstrap.min.css", rel="stylesheet")
+  link(href="/css/form-style.css", rel="stylesheet")
+  //link(href="/css/login-style.css", rel="stylesheet")
+  title Contact Us Form
+body 
+  include navbar.pug
+  .content(style="background-image: url(/images/map.jpg);")
+    .container
+      .row.align-items-stretch.justify-content-center.no-gutters
+        .col-md-5(style="margin-left:490px;margin-top:-90px;height:550px;")
+          .form.h-100.contact-wrap.p-3
+            h3.text-center Come Let's Talk
+            form.mb-5#contactForm(method="post", name="contactForm")
+              .row
+                .col-md-6.form-group.mb-3
+                  label.col-form-label(for) User Number *
+                  input.form-control#name(type="text", name="name", placeholder="e.g STC001")
+                br
+                .col-md-6.form-group.mb-3
+                  label.col-form-label(for) Name *
+                  input.form-control#name(type="text", name="name", placeholder="Your name")
+                .col-md-6.form-group.mb-3
+                  label.col-form-label(for) Email *
+                  input.form-control#email(type="email", name="email", placeholder="Your email")
+              .row
+                .col-md-12.form-group.mb-3
+                  label.col-form-label(for="budget") Subject
+                  input.form-control#subject(type="text", name="subject", placeholder="Your subject")
+              .row.mb-5
+                .col-md-12.form-group.mb-3
+                  label.col-form-label(for="message") Message *
+                  textarea.form-control#message(name="message", cols="30", rows="4", placeholder="Write your message")(style="height:100px;")
+              .row.justify-content-center
+                .col-md-5.form-group.text-center
+                  input.btn.btn-block.btn-primary.rounded-0.py-2.px-4(type="submit", value="Send Message")(style="margin-top:-95px;")
+                  span.submitting
+            #form-message-warning mt-4
+            #form-message-success.
+              
+              Your message was sent, thank you!
+              
+//
+   
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+// ---- Include the above in your HEAD tag --------
+script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js", integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi", crossorigin="anonymous")
+script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js", integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG", crossorigin="anonymous")
+script(src="js/jquery-3.3.1.min.js")
+script(src="js/popper.min.js")
+script(src="js/bootstrap.min.js")
+script(src="js/jquery.validate.min.js")
+script(src="js/main.js")
